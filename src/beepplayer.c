@@ -108,7 +108,7 @@ int main(int argc, char *argv[]) {
   puts("start playing");
 
   while (notelist[i].time != 0 && playing) {
-    printf("playing note #%u: height %d\n", i + 1, notelist[i].height);
+    printf("playing note #%zu: height %d\n", i + 1, notelist[i].height);
     if (notelist[i].height > 0) {
       callBeep(440 * pow(2, ((float)(notelist[i].height - 34) / 12)),
                notelist[i].time * 10 * (100 - notelist[i].staccato));
